@@ -7,9 +7,11 @@ public class Robot {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.print("U->Up , R -> Right , D -> DOWN , L -> LEFT: ");
         String comandes = scanner.nextLine();
-
+        System.out.println("*****série de commandes ******");
         System.out.println(comandes.toCharArray());
+        System.out.println("*******************************");
 
         for(char comand : comandes.toCharArray()) {
             switch(comand) {
@@ -29,6 +31,9 @@ public class Robot {
         }
 
         System.out.println("Position finale : ("+ x +","+ y +")");
+        if(x == 0 && y == 0) {
+            System.out.println("Le robot est revenu au point de départ");
+        }
     }
 
   /*  public static void extairnCommandes(String comandes) {
